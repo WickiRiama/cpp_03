@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:19:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/11 12:30:48 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/11 13:52:36 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ ClapTrap::~ClapTrap(void)
 ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 {
 	this->_name = rhs.getName();
+	this->_hitPoints = rhs.getHit();
+	this->_energyPoints = rhs.getEnergy();
+	this->_attackDamages = rhs.getAttack();
 }
 
 //==============================================================================
@@ -90,4 +93,19 @@ void ClapTrap::beRepaired(unsigned int amount)
 std::string ClapTrap::getName(void) const
 {
 	return this->_name;
+}
+
+unsigned int ClapTrap::getHit(void) const
+{
+	return this->_hitPoints;
+}
+
+unsigned int ClapTrap::getEnergy(void) const
+{
+	return this->_energyPoints;
+}
+
+unsigned int ClapTrap::getAttack(void) const
+{
+	return this->_attackDamages;
 }
