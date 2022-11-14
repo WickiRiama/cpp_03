@@ -6,12 +6,14 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:07:36 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/11 13:49:57 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/14 12:02:16 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
+# include <string>
 
 class ClapTrap {
 	private:

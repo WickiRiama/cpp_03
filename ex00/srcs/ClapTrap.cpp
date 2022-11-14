@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:19:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/11 13:52:36 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/14 12:18:26 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 	this->_hitPoints = rhs.getHit();
 	this->_energyPoints = rhs.getEnergy();
 	this->_attackDamages = rhs.getAttack();
+	return *this;
 }
 
 //==============================================================================
@@ -64,8 +65,14 @@ void ClapTrap::attack(const std::string &target)
 		this->_energyPoints--;
 		std::cout << "ClapTrap " << this->_name << " attacks " << target
 				  << ", causing " << this->_attackDamages
-				  << "points of damage !" << std::endl;
+				  << " points of damage !" << std::endl;
 	}
+	else
+		std::cout << "ClapTrap " << this->_name
+				  << " can't attack because it has " << this->_energyPoints
+				  << " energy points and " << this->_hitPoints << " hit points"
+				  << std::endl;
+
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -89,6 +96,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 				  << " point and has now " << this->_hitPoints << " hit points."
 				  << std::endl;
 	}
+	else
+		std::cout << "ClapTrap " << this->_name
+				  << " can't be repaired because it has " << this->_energyPoints
+				  << " energy points and " << this->_hitPoints << " hit points"
+				  << std::endl;
 }
 std::string ClapTrap::getName(void) const
 {
