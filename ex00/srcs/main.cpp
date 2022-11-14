@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:50:01 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/14 12:14:09 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/14 13:41:33 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main(void)
 	katara.attack("Toph");
 	toph.takeDamage(katara.getAttack());
 	toph.attack("Katara");
+	katara.takeDamage(toph.getAttack());
 	toph.beRepaired(5);
 
 	std::cout << katara.getName() << " has now " << katara.getHit()

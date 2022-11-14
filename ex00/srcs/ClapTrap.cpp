@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:19:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/14 12:18:26 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/14 13:40:21 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 //==============================================================================
 
 ClapTrap::ClapTrap(void) : _name("unnamed_trap"), _hitPoints(10),
-						   _energyPoints(10), _attackDamages(10)
+						   _energyPoints(10), _attackDamages(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10),
-									   _energyPoints(10), _attackDamages(10)
+									   _energyPoints(10), _attackDamages(0)
 {
 	std::cout << "Named constructor called with " << this->_name << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src) : _name(src.getName()), _hitPoints(10),
-										  _energyPoints(10), _attackDamages(10)
+										  _energyPoints(10), _attackDamages(0)
 {
 	std::cout << "Copy constructor called" << std::endl;
 }
@@ -72,7 +72,6 @@ void ClapTrap::attack(const std::string &target)
 				  << " can't attack because it has " << this->_energyPoints
 				  << " energy points and " << this->_hitPoints << " hit points"
 				  << std::endl;
-
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
