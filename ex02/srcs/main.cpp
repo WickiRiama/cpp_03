@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:50:01 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/14 16:08:01 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 13:39:32 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include "colors.h"
 
 int main(void)
@@ -29,6 +30,10 @@ int main(void)
 	ScavTrap zuko((std::string)RED+"Zuko"+RES);
 
 	std::cout << std::endl
+			  << CYN << "=== FragTraps ===" << RES << std::endl;
+	FragTrap aang((std::string)YEL+"Aang"+RES);
+
+	std::cout << std::endl
 			  << CYN << "=== Attacks ===" << RES << std::endl;
 	katara.attack("Toph");
 	toph.takeDamage(katara.getAttack());
@@ -40,6 +45,12 @@ int main(void)
 	toph.beRepaired(5);
 	katara.attack("Zuko");
 	zuko.takeDamage(katara.getAttack());
+	aang.attack("Zuko");
+	zuko.takeDamage(aang.getAttack());
+
+	std::cout << std::endl
+			  << CYN << "=== High Fives ===" << RES << std::endl;
+	aang.highFivesGuys();
 
 	std::cout << std::endl
 			  << CYN << "=== Guard gate mode ===" << RES << std::endl;
@@ -59,6 +70,9 @@ int main(void)
 			  << std::endl;
 	std::cout << zuko.getName() << " has now " << zuko.getHit()
 			  << " hit points and " << zuko.getEnergy() << " energy points."
+			  << std::endl;
+	std::cout << aang.getName() << " has now " << aang.getHit()
+			  << " hit points and " << aang.getEnergy() << " energy points."
 			  << std::endl;
 
 	std::cout << std::endl
