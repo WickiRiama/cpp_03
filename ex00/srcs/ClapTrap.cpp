@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:19:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/14 16:09:49 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 17:58:46 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ ClapTrap::ClapTrap(ClapTrap const &src) : _name(src.getName()), _hitPoints(10),
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap destructor called for " << this->name << std::endl;
+	std::cout << "ClapTrap destructor called for " << this->_name << std::endl;
 }
 
 //==============================================================================

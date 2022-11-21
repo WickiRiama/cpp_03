@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:18:29 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/21 17:51:33 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:00:30 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &rhs)
 
 void DiamondTrap::attack(const std::string& target)
 {
-	ScavcdTrap::attack(target);
+	ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI(void) const
