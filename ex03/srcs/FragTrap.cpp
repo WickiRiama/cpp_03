@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:27:54 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/21 15:43:03 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 17:36:00 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ FragTrap::FragTrap(void) : ClapTrap()
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+	this->_name = name;
 	std::cout << "FragTrap named constructor called with " << this->_name
 			  << std::endl;
 	this->_hitPoints = 100;

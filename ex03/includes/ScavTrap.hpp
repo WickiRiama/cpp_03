@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:48:31 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/21 15:34:48 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 16:35:37 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
-private:
+protected:
+	std::string _name;
 	bool _keeperMode;
 	ScavTrap(void);
 

@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:56:23 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/14 17:09:59 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/21 15:43:21 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,22 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs)
 //==============================================================================
 //  Functions
 //==============================================================================
+
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	{
+		this->_energyPoints--;
+		std::cout << "FragTrap " << this->_name << " attacks " << target
+				  << ", causing " << this->_attackDamages
+				  << " points of damage !" << std::endl;
+	}
+	else
+		std::cout << "FragTrap " << this->_name
+				  << " can't attack because it has " << this->_energyPoints
+				  << " energy points and " << this->_hitPoints << " hit points"
+				  << std::endl;
+}
 
 void ScavTrap::guardGate(void)
 {
