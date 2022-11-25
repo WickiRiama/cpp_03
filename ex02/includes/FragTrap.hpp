@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:28:06 by mriant            #+#    #+#             */
-/*   Updated: 2022/11/21 15:34:38 by mriant           ###   ########.fr       */
+/*   Updated: 2022/11/25 10:37:33 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
 
 	FragTrap &operator=(FragTrap const &src);
 
-	void attack(const std::string &target);
 	void highFivesGuys(void) const;
 };
 
